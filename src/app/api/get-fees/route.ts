@@ -1,8 +1,7 @@
 import { getErrorMessage } from "@/utils/misc";
 import axios from "axios";
-import { error } from "console";
 import { NextRequest, NextResponse } from "next/server";
-import { websites } from "../../../data/websites";
+import { websiteData } from "../../../data/websites";
 
 const mock = {
   from: "xmr",
@@ -69,7 +68,7 @@ async function godexFormatter() {
 }
 
 async function majesticBankFormatter() {
-  const website = websites["MAJESTIC_BANK"];
+  const website = websiteData["MAJESTIC_BANK"];
 
   const response = await axios.get("https://majesticbank.at/api/v1/calculate", {
     params: {

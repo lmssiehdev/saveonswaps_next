@@ -1,5 +1,3 @@
-import axios from "axios";
-import { Suspense } from "react";
 import { z } from "zod";
 
 const paramsSchema = z.object({
