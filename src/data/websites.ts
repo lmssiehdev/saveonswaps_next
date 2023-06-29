@@ -1,7 +1,7 @@
 export const websiteData = {
   MAJESTIC_BANK: {},
   SIDE_SHIFT: {},
-    : {},
+  // : {},
   SWAPUZ: {},
   X_CHANGE_ME: {},
   STEALTH_EX: {},
