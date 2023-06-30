@@ -68,8 +68,6 @@ async function godexFormatter() {
 }
 
 async function majesticBankFormatter() {
-  const website = websiteData["MAJESTIC_BANK"];
-
   const response = await axios.get("https://majesticbank.at/api/v1/calculate", {
     params: {
       from_amount: 0.1,
@@ -78,7 +76,7 @@ async function majesticBankFormatter() {
     },
   });
 
-  return { [website]: response.data };
+  return { majesticbank: response.data };
 }
 
 async function exchFormatter() {
@@ -226,7 +224,7 @@ async function stealthExFormatter() {
     );
     return data;
   } catch (e) {
-    console.erro(getErrorMessage(e));
+    console.error(getErrorMessage(e));
     return;
   }
 }
